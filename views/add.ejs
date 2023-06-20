@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/add.css">
+    <title>Ajouter un article</title>
+</head>
+<body>
+    <form class="form" action="/add" method="post">
+        <h2>Ajouter un article</h2>
+        <p type="Nome d'article:"><input placeholder="Le nom d'article ici.." name="Name"></input></p>
+        <p type="ID d'article:"><input placeholder="L'id de l'article ici.." name="ID"></input></p>
+  
+        <p type="Quantité:"></p><input id="taille" placeholder="S" name="S"><input  id="taille" placeholder="M" name="M"><input  id="taille" placeholder="L" name="L"><input  id="taille" placeholder="XL" name="XL"></input>
+        <p type="Catégorie"><select name="Catégorie">
+                              <option value="">--Please choose an option--</option>
+                              <option value="woman">woman</option>
+                              <option value="man">man</option>
+                              <option value="mix">mix</option>
+                            </select>
+        </p>
+        <p type="URL de l'image:"><input placeholder="URL.." name="URL"></input></p>
+        <p type="Matériel:"><input placeholder="Matériel.." name="Matériel"></input></p>
+        <p type="Type"><select name="Type">
+                              <option value="">--Please choose an option--</option>
+                              <option value="Pants">Pants</option>
+                              <option value="Skirt">Skirt</option>
+                              <option value="Top">Top</option>
+                              <option value="Dress">Dress</option>
+                              <option value="JumpSuit">Jump Suit</option>
+                              <option value="SweatShirt">Sweat Shirt</option>
+                              <option value="Bag">Bag</option>
+                              <option value="Accessory">Accessory</option>
+                            </select>
+        </p>
+        <p type="Marque:"><input placeholder="Marque.." name="Marque"></input></p>
+        <p type="Etat:"><input placeholder="état.." name="Etat"></input></p>
+        <p type="Prix:"><input placeholder="Prix.." name="Prix"></input></p>
+        <button type="submit">Valider</button>
+      </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+CREATION DE LA BASE DE DONÉES
+    Pour créer la base de données, il faut installer Posgresql et executer les commandes suivantes
+    psql -U postgres
+    CREATE DATABASE projet_web;
+    CREATE USER tix WITH ENCRYPTED PASSWORD 'tix.31';
+    GRANT ALL PRIVILEGES ON DATABASE projet_web TO tix;
+    \q
+    
+    Ensuite executer sur le terminal le fichier create-db.js avec: node ./create-db.js
+    
+    
+LANCEMENT DU SERVEUR 
+    Executer la commande : node ./server.js
+    
+    
+    

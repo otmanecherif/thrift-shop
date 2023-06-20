@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+    body{
+        background:#e2e2e2;
+        margin:0
+    }
+    #rectangle {
+        border-radius: 6px;
+        width: 369px;
+        background:#ffffff;
+        color:#fff;
+        margin: 300px auto;
+        padding: 46px;
+        text-align: center;
+        box-shadow:10px 10px 40px -14px #000
+    }
+    
+
+    .button {
+      border: 3px solid black;
+      background-color: white;
+      color: black;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 92%;
+      border-radius: 8px;
+      margin: 20px;
+    }
+
+    .button:hover{
+      background-color: #000000;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="rectangle">
+    <button id="add" class="button" >Ajouter des articles</button>
+    <button id="edit" class="button" >Modifer le stock</button>
+    <button id="commands" class="button" >Gerér les commandes</button>
+  </div>
+
+  <script>
+    document.querySelector('#add').addEventListener('click', function(){
+        window.location.href='add'
+    })
+    document.querySelector('#edit').addEventListener('click', function(){
+        window.location.href='edit'
+    })
+
+    document.querySelector('#commands').addEventListener('click', function(){
+        window.location.href='commands'
+    })
+
+    // Ajoutez ici votre code JavaScript si nécessaire
+  </script>
+</body>
+</html>

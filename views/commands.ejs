@@ -1,0 +1,37 @@
+<!-- commands.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Commands</title>
+  <link rel="stylesheet" type="text/css" href="/css/command.css">
+</head>
+<body>
+  <h1>Commands</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Surname</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Country</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% commands.forEach(function(command) { %>
+        <tr>
+          <td><%= command.id_cmd %></td>
+          <td><%= command.surname %></td>
+          <td><%= command.name %></td>
+          <td><%= command.email %></td>
+          <td><%= command.adress %></td>
+          <td><%= command.country %></td>
+          <td><%= command.total %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>

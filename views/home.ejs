@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ThriftShop</title>
+    <link rel="stylesheet" href="/css/home.css">
+
+   <!-- links to fonts* !-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@100;200;300;400;500;600;700&display=swap"
+     rel="stylesheet">
+    
+   <!--  to use cdnjs library for assets -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- to use icons remotly from the website boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+            <a href="#" class="logo">THRIFTED</a>
+           
+            <ul class="navbar">
+                <li><a href="#">Pants</a></li>
+                <li><a href="#">Shirts</a></li>
+                <li><a href="#">Jackets</a></li>
+                <li><a href="#">Dresses</a></li>
+                <li><a href="#">Other products</a></li>
+                <li><a href="#">Combos</a></li>
+             
+            </ul>
+            
+            <div class="navicons">
+               
+                <a href="#" class="icon-search"><i class='bx bx-search'></i></a>
+                <a href="/cart-page" class="icon-cart"><i class='bx bx-cart' ></i></a>
+                <a href="#" class="icon-likes"><i class='bx bx-heart' ></i></a>
+
+            </div>
+            
+    </header>
+    <main>
+    
+        <section class="container-fluid">
+            <section class="main-home">
+                <div class="main-text">
+                    <h5>Spring Collection</h5>
+                    <h1>Casual Combo</h1>
+                    <p>Join the Thrift Revolution</p>
+
+                    <a href="/shop-page" class="main-button">Shop Now <i class='bx bx-right-arrow-alt' ></i> </a>
+                </div>
+                <div class="downarrow">
+                    <a href="#popular-combos" class="down"><i class='bx bx-down-arrow-alt'></i></a>
+                </div>
+            </section>
+        </section>
+       
+        <section class="combos" id="popular-combos">
+                <div class="center-text">
+                    <h2>Our New Arrivals</h2>
+                </div>
+                <div class="products" >
+                    <% products.forEach(product => { %>
+                    <div class="row">
+                        
+                        <img class="product-photo" data-product-id="<%= product.product_id %>" src="<%= product.main_img %>" alt="">
+        
+                            <div class="product-stat"> <h5> <%= product.status %></h5></div>
+        
+                            <div class="product-info">
+                                <div class="price"> <h4><%= product.name %></h4><p><%= product.price %>£</p> </div>
+                                 <div class="icons">
+                                    <a class="like-icon"><i class='bx bx-heart' ></i></a>
+                                    <a class="add-cart" data-product-id="<%= product.product_id %>"><i class='bx bx-cart' ></i></a>
+                                    </div>
+                              </div>     
+                         
+                    </div>
+                    <% }); %>
+                </div>
+                    
+
+                        
+                        
+                
+         </section>
+
+         <script src="js/home.js"></script>
+
+    </main>
+    
+       <footer>
+        <p>&copy; 2022-2023 THRIFTED</p>
+    </footer>
+</body>
+</html>
